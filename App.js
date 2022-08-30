@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import STI from './screens/sti';
 import EmbedHealth from './screens/checkHealth';
@@ -43,8 +43,8 @@ export default function App() {
         tabBarInactiveTintColor: 'grey',
       })}
     >
-        <tab.Screen name='Health' component={EmbedHealth}/>
         <tab.Screen name='STIs' component={STI}/>
+        <tab.Screen name='Health' component={EmbedHealth}/>
     </tab.Navigator>
 
   </NavigationContainer>

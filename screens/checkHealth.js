@@ -4,6 +4,7 @@ import { WebView } from 'react-native-webview';
 
 
 const CHECKER = 'https://patient.info/symptom-checker'
+const SIDE = 'https://google.com' 
 
 export default function EmbedHealth(){
     return(
