@@ -1,14 +1,27 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, StyleSheet } from "react-native";
+import { WebView } from 'react-native-webview';
 
+
+const CHECKER = 'https://patient.info/symptom-checker'
 
 export default function EmbedHealth(){
     return(
 
-        <View>
-            <Text>
-                embed
-            </Text>
+        <View style={styles.container}>
+            <View style={{width:"100%", height:"100%"}}>
+                <WebView
+                    source={{uri: CHECKER}}
+                    onLoad={console.log("done")}
+                />
+            </View>
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:"grey",
+        flex:1,
+    }
+})
